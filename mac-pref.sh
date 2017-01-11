@@ -4,19 +4,26 @@
 # License: MIT <https://spdx.org/licenses/MIT.html>
 #
 # Developed by trial and error on macOS Sierra 10.12.2 (16c67)
+#
+# Pre-condition: logged in as an admin user and the user you want to configure.
+
+# Check if my login shell is zsh or set it to zsh
+dscacheutil -q user -a name `whoami` | grep zsh
+if [[ $? != 0 ]] ; then
+	chsh -s /bin/zsh
+fi
 
 
-# Required Apple Command Line Tools (CLT) are installed
+
+# Homebrew requires Apple Command Line Tools (CLT) are installed
 
 pkgutil --pkg-info com.apple.pkg.CLTools_Executables >/dev/null 2>&1
-
 if [[ $? != 0 ]] ; then
 	# CLT is not installed
 	echo 'XCode Command Line Tools (CLT) are not installed. Run `git`'
 	echo 'or any other included tool to interactively install CLT.'
 	exit
 fi
-
 
 which -s brew
 if [[ $? != 0 ]] ; then
