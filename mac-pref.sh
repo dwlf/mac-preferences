@@ -28,6 +28,23 @@ else
 fi
 
 
+# Install CLI tools
+brew install hilite ag 
+brew install vim --with-override-system-vi
+
+# Install Apps
+brew cask install dropbox \
+                  atext \
+                  omnioutliner evernote skitch \
+                  nvalt \
+                  docker \
+                  slack skype \
+                  vlc \
+                  openoffice
+
+
+
+
 # Thanks to
 #
 # https://www.davd.eu/os-x-automated-provisioning-using-homebrew-and-cask/
