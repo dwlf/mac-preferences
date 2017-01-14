@@ -75,12 +75,13 @@ homeshick link --force
 
 
 # Install more CLI tools
-brew install hilite ag 
+brew install hilite ag hub
 
 # Install Apps
 brew cask install dropbox \
                   atext \
                   omnioutliner evernote skitch \
+                  flickr-uploadr \
                   nvalt \
                   docker \
                   slack skype \
