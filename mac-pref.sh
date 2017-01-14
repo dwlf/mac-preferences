@@ -7,6 +7,9 @@
 #
 # Pre-condition: logged in as an admin user and the user you want to configure.
 
+
+## UNIX 
+
 # Check if my login shell is zsh or set it to zsh
 dscacheutil -q user -a name `whoami` | grep zsh
 if [[ $? != 0 ]] ; then
@@ -34,10 +37,45 @@ else
 	brew update
 fi
 
+which vi | grep -q /usr/local/bin
+if [[ $? != 0 ]] ; then
+	brew install vim --with-override-system-vi
+fi
 
-# Install CLI tools
+
+# Install my homeshicks
+
+if [ ! -d $HOME/.homesick/repos/homeshick ]; then
+	git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
+fi
+
+type -t homeshick | grep -q function
+if [[ $? != 0 ]] ; then
+	source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+fi
+
+homeshick list | grep -q dotfiles
+if [[ $? != 0 ]] ; then
+	homeshick clone -batch https://github.com/lloydde/dotfiles
+fi
+
+homeshick list | grep -q dotzsh
+if [[ $? != 0 ]] ; then
+	homeshick clone --batch https://github.com/lloydde/dotzsh
+fi
+
+homeshick list | grep -q dotvim
+if [[ $? != 0 ]] ; then
+	homeshick clone --batch https://github.com/lloydde/dotvim
+fi
+
+## Not sure if this is needed
+homeshick link --force
+
+
+
+# Install more CLI tools
 brew install hilite ag 
-brew install vim --with-override-system-vi
 
 # Install Apps
 brew cask install dropbox \
