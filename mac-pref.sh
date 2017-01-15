@@ -64,11 +64,6 @@ if [[ $? != 0 ]] ; then
 	homeshick clone --batch https://github.com/lloydde/dotzsh
 fi
 
-homeshick list | grep -q dotvim
-if [[ $? != 0 ]] ; then
-	homeshick clone --batch https://github.com/lloydde/dotvim
-fi
-
 ## Not sure if this is needed
 homeshick link --force
 
