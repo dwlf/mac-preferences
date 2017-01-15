@@ -6,16 +6,17 @@
 # Developed by trial and error on macOS Sierra 10.12.2 (16c67)
 #
 # Pre-condition: logged in as an admin user and the user you want to configure.
+#
+# Should be safe to re-run and rerun.
 
 
-## UNIX 
+## UNIX ##
 
 # Check if my login shell is zsh or set it to zsh
 dscacheutil -q user -a name `whoami` | grep zsh
 if [[ $? != 0 ]] ; then
 	chsh -s /bin/zsh
 fi
-
 
 
 # Homebrew requires Apple Command Line Tools (CLT) are installed
@@ -64,8 +65,13 @@ if [[ $? != 0 ]] ; then
 	homeshick clone --batch https://github.com/lloydde/dotzsh
 fi
 
-## Not sure if this is needed
+# Useful in scenario were re-running to get updates.
 homeshick link --force
+
+# junegunn/vim-plug will install on first launch of vim
+vim +qa!
+# Upgrade vim-plug and install/update all plugins
+vim +PlugUpgrade +PlugUpdate +qa!
 
 
 
