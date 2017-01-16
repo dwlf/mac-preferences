@@ -80,6 +80,9 @@ brew install mas
 # Install more CLI tools
 brew install hilite ag hub
 
+# If I'm rerunning, then update installed brews
+brew upgrade
+
 
 ## end UNIX ##
 
@@ -95,6 +98,7 @@ osascript apple-scripts/keyboard-cfg.applescript
 
 # Install Apps
 brew cask install dropbox \
+                  firefox brave \
                   atext \
                   omnioutliner evernote skitch \
                   flickr-uploadr \
