@@ -7,6 +7,8 @@
 # Pre-condition: keyboard is the default keyboard
 #
 # Developed by trial and error on macOS Sierra 10.12.2 (16c67)
+# Mac OS X El Capitan 10.11 does not have an option to change the
+# Caps Lock key press.
 
 # Restart system preferences to make GUI state more predictable
 if application "System Preferences" is running then

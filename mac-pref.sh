@@ -73,10 +73,21 @@ vim +qa!
 # Upgrade vim-plug and install/update all plugins
 vim +PlugUpgrade +PlugUpdate +qa!
 
-
-
 # Install more CLI tools
 brew install hilite ag hub
+
+
+## end UNIX ##
+
+
+## System Preferences
+
+osascript apple-scripts/keyboard-cfg.applescript
+
+## end System Preferences
+
+
+## .apps ##
 
 # Install Apps
 brew cask install dropbox \
