@@ -100,6 +100,9 @@ brew cask install dropbox \
                   vlc \
                   openoffice
 
+	# Trying
+brew cask install anki
+
 
 
 
