@@ -73,6 +73,10 @@ vim +qa!
 # Upgrade vim-plug and install/update all plugins
 vim +PlugUpgrade +PlugUpdate +qa!
 
+
+# Install mas: Mac App Store command line interface
+brew install mas
+
 # Install more CLI tools
 brew install hilite ag hub
 
@@ -102,6 +106,13 @@ brew cask install dropbox \
 
 	# Trying
 brew cask install anki
+
+
+# Install Apps that are not available on brew cask
+# ie apps that are only available on Mac App Store
+
+iMovieProductID=$(mas search imovie | grep -x '\d*\s*iMovie$' | awk '{print $1}')
+mas install $iMovieProductID
 
 
 
