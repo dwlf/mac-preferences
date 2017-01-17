@@ -100,6 +100,7 @@ osascript apple-scripts/keyboard-cfg.applescript
 brew cask install dropbox \
                   firefox brave \
                   atext \
+                  flux \
                   omnioutliner evernote skitch \
                   flickr-uploadr \
                   nvalt \
