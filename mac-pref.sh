@@ -109,6 +109,11 @@ brew cask install dropbox \
 	# Trying
 brew cask install anki
 
+	# Computer / Hardware specific
+# TODO make this computer specific
+# Current cask installs 3.2L31, but that doesn't work on macOS 10.12.2
+# Clicking update in the apps help menu gets the correct version, 3.2 L91
+### brew cask install scansnap-manager-s1300
 
 # Install Apps that are not available on brew cask
 # ie apps that are only available on Mac App Store
