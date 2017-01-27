@@ -12,13 +12,6 @@
 
 ## UNIX ##
 
-# Check if my login shell is zsh or set it to zsh
-dscacheutil -q user -a name `whoami` | grep zsh
-if [[ $? != 0 ]] ; then
-	chsh -s /bin/zsh
-fi
-
-
 # Homebrew requires Apple Command Line Tools (CLT) are installed
 
 pkgutil --pkg-info com.apple.pkg.CLTools_Executables >/dev/null 2>&1
@@ -76,6 +69,10 @@ vim +PlugUpgrade +PlugUpdate +qa!
 
 # Install mas: Mac App Store command line interface
 brew install mas
+
+# Install and use up-to-date version
+brew install zsh
+chsh -s $(which zsh)
 
 # Install more CLI tools
 brew install hilite ag hub
