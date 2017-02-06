@@ -84,6 +84,16 @@ brew upgrade
 ## end UNIX ##
 
 
+## Files & Links
+
+### iCloud Filesystem
+if [ ! -L ~/notes]; then
+	ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/notes ~/notes
+fi
+
+## end Files & Links
+
+
 ## System Preferences
 
 osascript apple-scripts/keyboard-cfg.applescript
