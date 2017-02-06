@@ -95,13 +95,14 @@ osascript apple-scripts/keyboard-cfg.applescript
 
 # Install Apps
 brew cask install dropbox \
+                  atom sourcetree \
+                  docker \
                   firefox brave \
                   atext \
                   flux \
                   omnioutliner evernote skitch \
                   flickr-uploadr \
                   nvalt \
-                  docker \
                   slack skype \
                   vlc \
                   openoffice
