@@ -109,7 +109,7 @@ brew cask install dropbox \
                   docker \
                   firefox brave \
                   atext \
-                  flux \
+                  sonos flux \
                   omnioutliner evernote skitch \
                   flickr-uploadr \
                   nvalt \
