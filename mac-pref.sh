@@ -113,7 +113,6 @@ brew cask install dropbox \
                   atext \
                   sonos flux \
                   omnioutliner evernote skitch \
-                  flickr-uploadr \
                   nvalt \
                   slack skype \
                   vlc \
