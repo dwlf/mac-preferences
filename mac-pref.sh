@@ -5,7 +5,8 @@
 #
 # Developed by trial and error on macOS Sierra 10.12.2 (16c67)
 #
-# Pre-condition: logged in as an admin user and the user you want to configure.
+# Pre-condition: logged in as an admin user and that is the user
+# you want to configure.
 #
 # Should be safe to re-run and rerun.
 
