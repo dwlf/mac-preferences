@@ -10,6 +10,14 @@
 #
 # Should be safe to re-run and rerun.
 
+# Need to be on the Internet to download software to install
+if ping -c 1 google.com >> /dev/null 2>&1; then
+    echo "Computer is online. Continuing..."
+else
+    echo "Could not ping Google, therefore computer does not appear to be online."
+    exit 1
+fi
+
 
 ## UNIX ##
 
