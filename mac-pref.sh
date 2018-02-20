@@ -45,17 +45,8 @@ if [[ $? != 0 ]] ; then
 	brew install vim --with-override-system-vi
 fi
 
-
-# Install my homeshicks
-
-if [ ! -d $HOME/.homesick/repos/homeshick ]; then
-	git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
-fi
-
-type -t homeshick | grep -q function
-if [[ $? != 0 ]] ; then
-	source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-fi
+# Install homeshick 
+brew install homeshick
 
 homeshick list | grep -q dotfiles
 if [[ $? != 0 ]] ; then
@@ -67,7 +58,7 @@ if [[ $? != 0 ]] ; then
 	homeshick clone --batch https://github.com/lloydde/dotzsh
 fi
 
-# Useful in scenario were re-running to get updates.
+## Useful in scenario were re-running to get updates.
 homeshick link --force
 
 # junegunn/vim-plug will install on first launch of vim
