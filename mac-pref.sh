@@ -106,7 +106,6 @@ osascript apple-scripts/keyboard-cfg.applescript
 
 # Install Apps
 brew cask install dropbox \
-                  arq \
                   atom sourcetree \
                   docker \
                   firefox brave \
