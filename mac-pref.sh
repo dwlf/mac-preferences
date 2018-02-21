@@ -104,7 +104,7 @@ brew upgrade
 
 ### iCloud Filesystem
 if [ ! -L ~/notes ]; then
-	ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/notes ~/notes
+	ln -s ~/Dropbox/notes/ ~/notes
 fi
 
 ## end Files & Links
