@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# (C) Copyright 2016 Lloyd DB Dewolf
+# (C) Copyright 2018 Lloyd DB Dewolf
 # License: MIT <https://spdx.org/licenses/MIT.html>
 #
 # Developed by trial and error on macOS Sierra 10.12.2 (16c67)
