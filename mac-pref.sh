@@ -161,6 +161,10 @@ if [[ $? == 0 ]] ; then
 	exit 1
 fi
 
+
+thingsProductID=$(mas search things | egrep '\d+\s+Things 3\s+\(' | awk '{print $1}')
+mas install $thingsProductID
+
 iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie\s+\(' | awk '{print $1}')
 mas install $iMovieProductID
 
