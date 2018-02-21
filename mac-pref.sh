@@ -137,6 +137,7 @@ brew cask install dropbox \
 	## <None currently> ##
 
 	# Computer / Hardware specific
+
 # TODO make this computer specific
 # Current cask installs 3.2L31, but that doesn't work on macOS 10.12.2
 # Clicking update in the apps help menu gets the correct version, 3.2 L91
@@ -145,7 +146,7 @@ brew cask install dropbox \
 # Install Apps that are not available on brew cask
 # ie apps that are only available on Mac App Store
 
-iMovieProductID=$(mas search imovie | grep -x '\d*\s*iMovie$' | awk '{print $1}')
+iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie' | awk '{print $1}')
 mas install $iMovieProductID
 
 
