@@ -121,12 +121,13 @@ osascript apple-scripts/keyboard-cfg.applescript
 
 # Install Apps
 brew cask install dropbox \
+                  shiftit \
                   atom sourcetree \
                   docker \
                   firefox brave \
                   atext \
                   flux \
-                  omnioutliner evernote skitch \
+                  evernote skitch \
                   nvalt \
                   slack skype \
                   vlc \
@@ -138,9 +139,11 @@ brew cask install sonos
 
 	# Trying
 
-	## <None currently> ##
+		## <None currently> ##
 
 	# Computer / Hardware specific
+
+
 
 # TODO make this computer specific
 # Current cask installs 3.2L31, but that doesn't work on macOS 10.12.2
@@ -150,7 +153,6 @@ brew cask install sonos
 
 # Install Apps that are not available on brew cask
 # ie apps that are only available on Mac App Store
-
 
 mas account | grep -q '^Not'
 if [[ $? == 0 ]] ; then
@@ -168,6 +170,10 @@ mas install $thingsProductID
 iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie\s+\(' | awk '{print $1}')
 mas install $iMovieProductID
 
+
+# Manually Installing
+
+## OmniOutliner-4.6.1.dmg
 
 
 
