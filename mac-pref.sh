@@ -125,12 +125,16 @@ brew cask install dropbox \
                   docker \
                   firefox brave \
                   atext \
-                  sonos flux \
+                  flux \
                   omnioutliner evernote skitch \
                   nvalt \
                   slack skype \
                   vlc \
                   openoffice
+
+# Sonos is not in main caskroom, but instead in a separate "drivers" :(
+brew tap caskroom/drivers
+brew cask install sonos
 
 	# Trying
 
@@ -143,8 +147,11 @@ brew cask install dropbox \
 # Clicking update in the apps help menu gets the correct version, 3.2 L91
 ### brew cask install scansnap-manager-s1300
 
+
 # Install Apps that are not available on brew cask
 # ie apps that are only available on Mac App Store
+
+
 
 iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie' | awk '{print $1}')
 mas install $iMovieProductID
