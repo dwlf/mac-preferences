@@ -153,7 +153,8 @@ brew cask install sonos
 
 
 
-iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie' | awk '{print $1}')
+
+iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie\s+\(' | awk '{print $1}')
 mas install $iMovieProductID
 
 
