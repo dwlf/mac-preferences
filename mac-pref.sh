@@ -133,7 +133,8 @@ brew cask install dropbox \
                   openoffice
 
 	# Trying
-brew cask install anki
+
+	## <None currently> ##
 
 	# Computer / Hardware specific
 # TODO make this computer specific
