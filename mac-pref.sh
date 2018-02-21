@@ -70,9 +70,25 @@ vim +PlugUpgrade +PlugUpdate +qa!
 # Install mas: Mac App Store command line interface
 brew install mas
 
-# Install and use up-to-date version
+# Install up-to-date version of zsh
 brew install zsh
-chsh -s $(which zsh)
+
+cat /etc/shells | grep -q $(which zsh)
+if [[ $? != 0 ]] ; then
+	sudo bash -c "echo $(which zsh) >> /etc/shells"
+fi
+
+# Need shell to already be in /etc/shells
+cat /etc/shells | grep -q $(which zsh)
+if [[ $? == 0 ]] ; then
+	## Check if my login shell is zsh, else prompt me to change
+	## to up-to-date version of zsh
+	dscacheutil -q user -a name `whoami` | grep zsh
+	if [[ $? != 0 ]] ; then
+		chsh -s $(which zsh)
+	fi
+fi
+
 
 # Install more CLI tools
 brew install hilite ag hub
