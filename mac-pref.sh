@@ -152,7 +152,14 @@ brew cask install sonos
 # ie apps that are only available on Mac App Store
 
 
-
+mas account | grep -q '^Not'
+if [[ $? == 0 ]] ; then
+	# Currently broken in mas 1.4.1
+	# https://github.com/mas-cli/mas/issues/107#issuecomment-367383144
+	### mas signin $(cat .appleid)
+	echo "Please sign in to Mac App Store"
+	exit 1
+fi
 
 iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie\s+\(' | awk '{print $1}')
 mas install $iMovieProductID
