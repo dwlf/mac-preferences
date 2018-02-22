@@ -110,13 +110,6 @@ fi
 ## end Files & Links
 
 
-## System Preferences
-
-osascript apple-scripts/keyboard-cfg.applescript
-
-## end System Preferences
-
-
 ## .apps ##
 
 # Install Apps
@@ -173,7 +166,54 @@ mas install $iMovieProductID
 
 # Manually Installing
 
-## OmniOutliner-4.6.1.dmg
+#### OmniOutliner-4.6.1.dmg
+
+
+
+## System Preferences
+
+# Change check for macOS updates from weekly to daily
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Finder
+
+defaults write com.apple.finder AppleShowAllFiles -bool TRUE
+killall Finder
+
+
+# Dock
+
+brew cask install dockutil
+
+defaults write com.apple.dock orientation left
+defaults write com.apple.Dock autohide -bool TRUE
+defaults write com.apple.Dock showhidden -bool TRUE
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+killall Dock
+
+dockutil --remove Siri --no-restart
+dockutil --remove Launchpad --no-restart
+dockutil --remove Safari --no-restart
+dockutil --remove Contacts --no-restart
+dockutil --remove Notes  --no-restart
+dockutil --remove Reminders --no-restart
+dockutil --remove Maps --no-restart
+dockutil --remove Photos --no-restart
+dockutil --remove FaceTime --no-restart
+dockutil --remove iTunes --no-restart
+dockutil --remove iBooks --no-restart
+dockutil --remove "App Store" --no-restart
+dockutil --remove "System Preferences" --no-restart
+dockutil --add /Applications/Google\ Chrome.app --position 1 --no-restart
+dockutil --add /Applications/Mail.app --position 2 --no-restart
+# Calendar
+dockutil --add /Applications/Messages.app --position 4 --no-restart
+dockutil --add /Applications/Slack.app --position 5 --no-restart
+dockutil --add /Applications/OmniOutliner.app --position 6 --no-restart
+
+# Keyboards
+
+osascript apple-scripts/keyboard-cfg.applescript
 
 
 
