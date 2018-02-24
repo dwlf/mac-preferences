@@ -188,7 +188,7 @@ killall Finder
 
 # Dock
 
-brew cask install dockutil
+brew install dockutil
 
 defaults write com.apple.dock orientation left
 defaults write com.apple.Dock autohide -bool TRUE
