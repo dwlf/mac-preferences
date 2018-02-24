@@ -114,6 +114,7 @@ fi
 
 # Install Apps
 brew cask install dropbox \
+                  cryptomator \
                   shiftit \
                   atom sourcetree \
                   docker \
