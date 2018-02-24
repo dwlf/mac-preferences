@@ -138,11 +138,6 @@ brew cask install sonos
 
 
 
-# TODO make this computer specific
-# Current cask installs 3.2L31, but that doesn't work on macOS 10.12.2
-# Clicking update in the apps help menu gets the correct version, 3.2 L91
-### brew cask install scansnap-manager-s1300
-
 
 # Install Apps that are not available on brew cask
 # ie apps that are only available on Mac App Store
@@ -168,6 +163,15 @@ mas install $iMovieProductID
 
 #### OmniOutliner-4.6.1.dmg
 
+
+# TODO make this computer specific
+# Current cask installs 3.2L31, but that doesn't work on macOS 10.12.2
+# Clicking update in the apps help menu gets the correct version, 3.2 L91
+
+### brew cask install scansnap-manager-s1300
+
+# Installed on Kitten as it runs hot
+### brew cask install smcfancontrol
 
 
 ## System Preferences
