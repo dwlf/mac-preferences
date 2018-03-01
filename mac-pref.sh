@@ -50,7 +50,7 @@ brew install homeshick
 
 homeshick list | grep -q dotfiles
 if [[ $? != 0 ]] ; then
-	homeshick clone -batch https://github.com/lloydde/dotfiles
+	homeshick clone --batch https://github.com/lloydde/dotfiles
 fi
 
 homeshick list | grep -q dotzsh
