@@ -148,7 +148,7 @@ if [[ $? == 0 ]] ; then
 	# Currently broken in mas 1.4.1
 	# https://github.com/mas-cli/mas/issues/107#issuecomment-367383144
 	### mas signin $(cat .appleid)
-	echo "Please sign in to Mac App Store"
+	echo "Please sign in to Mac App Store and then run again."
 	exit 1
 fi
 
