@@ -209,12 +209,13 @@ dockutil --remove iTunes --no-restart
 dockutil --remove iBooks --no-restart
 dockutil --remove "App Store" --no-restart
 dockutil --remove "System Preferences" --no-restart
-dockutil --add /Applications/Google\ Chrome.app --position 1 --no-restart
-dockutil --add /Applications/Mail.app --position 2 --no-restart
+dockutil --add /Applications/Things3.app --position 1 --no-restart
+dockutil --add /Applications/Google\ Chrome.app --position 2 --no-restart
+dockutil --add /Applications/Mail.app --position 3 --no-restart
 # Calendar
-dockutil --add /Applications/Messages.app --position 4 --no-restart
-dockutil --add /Applications/Slack.app --position 5 --no-restart
-dockutil --add /Applications/OmniOutliner.app --position 6 --no-restart
+dockutil --add /Applications/Messages.app --position 5 --no-restart
+dockutil --add /Applications/Slack.app --position 6 --no-restart
+dockutil --add /Applications/OmniOutliner.app --position 7
 
 # Keyboards
 
