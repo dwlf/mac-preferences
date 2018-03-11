@@ -121,7 +121,7 @@ brew cask install dropbox \
                   firefox brave \
                   atext \
                   flux \
-                  evernote skitch \
+                  omnioutliner evernote skitch \
                   nvalt \
                   slack skype \
                   vlc \
