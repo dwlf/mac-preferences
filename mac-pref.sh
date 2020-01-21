@@ -44,6 +44,7 @@ else
 	brew update
 fi
 
+
 ### Brew vim as Apple is always going to be behind
 brew install vim
 
@@ -55,11 +56,15 @@ homeshick list | grep -q dotfiles
 if [[ $? != 0 ]] ; then
 	homeshick clone --batch https://github.com/lloydde/dotfiles
 fi
+### TODO need to set push to ssh first time
+
 
 homeshick list | grep -q dotzsh
 if [[ $? != 0 ]] ; then
 	homeshick clone --batch https://github.com/lloydde/dotzsh
 fi
+### TODO need to set push to ssh first time
+
 
 ## Useful in scenario were re-running to get updates.
 homeshick link --force
