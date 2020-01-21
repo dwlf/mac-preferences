@@ -9,6 +9,10 @@
 # you want to configure.
 #
 # Should be safe to re-run and rerun.
+#
+### TODO rewrite this in Python Plumbum as any of my time spent 
+###      in Bash is lostly
+
 
 # Need to be on the Internet to download software to install
 if ping -c 1 google.com >> /dev/null 2>&1; then
