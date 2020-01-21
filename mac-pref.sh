@@ -66,8 +66,11 @@ fi
 ### TODO need to set push to ssh first time
 
 
+# TODO linking every time is too slow even without --force
+#      Too slow for improving the script.
 ## Useful in scenario were re-running to get updates.
-homeshick link --force
+# homeshick link
+
 
 # junegunn/vim-plug will install on first launch of vim
 vim +qa!
