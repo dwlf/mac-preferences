@@ -3,7 +3,7 @@
 # (C) Copyright 2018 Lloyd DB Dewolf
 # License: MIT <https://spdx.org/licenses/MIT.html>
 #
-# Developed by trial and error on macOS High Sierra 10.13.3 (17D102)
+# Developed by trial and error on macOS Catalina 10.15.2 (19C57)
 #
 # Pre-condition: logged in as an admin user and that is the user
 # you want to configure.
