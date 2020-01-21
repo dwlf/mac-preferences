@@ -40,10 +40,9 @@ else
 	brew update
 fi
 
-which vi | grep -q /usr/local/bin
-if [[ $? != 0 ]] ; then
-	brew install vim --with-override-system-vi
-fi
+### Brew vim as Apple is always going to be behind
+brew install vim
+
 
 # Install homeshick 
 brew install homeshick
