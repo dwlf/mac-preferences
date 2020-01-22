@@ -118,28 +118,32 @@ if [[ $? == 0 ]] ; then
 	exit 1
 fi
 
-### TODO discovered that MAS doesn't will reinstall an Apple already directly installed
-###      using App Store. I probably just want to reinstall that first time
-###      A more compelling reason is updating using mas
+# 1Password 7
+passwordProductID=$(mas search 1password | egrep '\d+\s+1Password 7 - Password Manager\s+\('| awk '{print $1}')
+mas install $passwordProductID
 
+# Things 3
 thingsProductID=$(mas search things | egrep '\d+\s+Things 3\s+\(' | awk '{print $1}')
 mas install $thingsProductID
 
+# iMovie
 iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie\s+\(' | awk '{print $1}')
 mas install $iMovieProductID
 
+# Slack
 slackProductID=$(mas search slack | egrep '\d+\s+Slack\s+\(' | awk '{print $1}')
 mas install $slackProductID
+
 
 # List updates and upgrade
 mas outdated
 mas upgrade
 
 
-
 ### TODO favor Apple Store versions 
 ###      If there is a mas version then I should install
 ###      from App Store as additional security review
+###      A more compelling reason is updating using mas
 
 # Install Apps
 brew cask install --appdir=~/Applications dropbox \
