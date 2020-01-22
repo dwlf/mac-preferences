@@ -128,7 +128,7 @@ brew cask install --appdir=~/Applications sonos
 
 	# Computer / Hardware specific
 
-
+		## <None currently> ##
 
 
 # Install Apps that are not available on brew cask
@@ -151,9 +151,8 @@ iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie\s+\(' | awk '{print $1
 mas install $iMovieProductID
 
 
-# Manually Installing
-
-#### OmniOutliner-4.6.1.dmg
+### TODO if preferences files don't exist (first run) then I should open
+###      recently installed application. For example, get Dropbox sync'd.
 
 
 ### TODO make this computer specific
