@@ -106,7 +106,7 @@ brew install hilite ag hub
 ## .apps ##
 
 # Install Apps
-brew cask install dropbox \
+brew cask install --appdir=~/Applications dropbox \
                   1password cryptomator \
                   shiftit \
                   firefox brave-browser \
@@ -120,7 +120,7 @@ brew cask install dropbox \
 
 # Sonos is not in main caskroom, but instead in a separate "drivers" :(
 brew tap caskroom/drivers
-brew cask install sonos
+brew cask install --appdir=~/Applications sonos
 
 	# Trying
 
