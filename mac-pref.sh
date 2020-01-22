@@ -109,7 +109,7 @@ brew install hilite ag hub
 brew cask install dropbox \
                   1password cryptomator \
                   shiftit \
-                  firefox brave \
+                  firefox brave-browser \
                   atext \
                   flux \
                   omnioutliner evernote skitch \
