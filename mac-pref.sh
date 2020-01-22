@@ -111,16 +111,6 @@ brew upgrade
 ## end UNIX ##
 
 
-## Files & Links
-
-### iCloud Filesystem
-if [ ! -L ~/notes ]; then
-	ln -s ~/Dropbox/notes/ ~/notes
-fi
-
-## end Files & Links
-
-
 ## .apps ##
 
 # Install Apps
@@ -176,14 +166,26 @@ mas install $iMovieProductID
 #### OmniOutliner-4.6.1.dmg
 
 
-# TODO make this computer specific
+### TODO make this computer specific
 # Current cask installs 3.2L31, but that doesn't work on macOS 10.12.2
 # Clicking update in the apps help menu gets the correct version, 3.2 L91
-
+#
 ### brew cask install scansnap-manager-s1300
 
 # Installed on Kitten as it runs hot
 ### brew cask install smcfancontrol
+
+
+## Files & Links
+
+### iCloud Filesystem
+if [ ! -L ~/notes ]; then
+	ln -s ~/Dropbox/notes/ ~/notes
+fi
+
+## end Files & Links
+
+
 
 
 ## System Preferences
