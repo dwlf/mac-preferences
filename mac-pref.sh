@@ -42,6 +42,8 @@ if [[ $? != 0 ]] ; then
 else
 	echo "Brewing fresh brew..."
 	brew update
+	# If I'm rerunning, then update installed brews
+	brew upgrade
 fi
 
 
@@ -103,9 +105,6 @@ fi
 
 # Install more CLI tools
 brew install hilite ag hub
-
-# If I'm rerunning, then update installed brews
-brew upgrade
 
 
 ## end UNIX ##
