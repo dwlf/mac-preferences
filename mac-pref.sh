@@ -109,7 +109,7 @@ brew install hilite ag hub
 brew cask install --appdir=~/Applications dropbox \
                   1password cryptomator \
                   shiftit \
-                  firefox brave-browser \
+                  firefox brave-browser google-chrome \
                   atext \
                   flux \
                   omnioutliner evernote skitch \
