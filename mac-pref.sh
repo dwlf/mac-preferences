@@ -109,8 +109,6 @@ brew install hilite ag hub
 brew cask install dropbox \
                   1password cryptomator \
                   shiftit \
-                  atom sourcetree \
-                  docker \
                   firefox brave \
                   atext \
                   flux \
