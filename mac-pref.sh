@@ -73,9 +73,6 @@ vim +qa!
 vim +PlugUpgrade +PlugUpdate +qa!
 
 
-# Install mas: Mac App Store command line interface
-brew install mas
-
 # Install up-to-date version of zsh
 brew install zsh
 
@@ -105,6 +102,45 @@ brew install hilite ag hub
 
 ## .apps ##
 
+# Install mas: Mac App Store command line interface
+brew install mas
+
+# Install Apps that available in Mac App Store (mas)
+
+mas account | grep -q '^Not'
+if [[ $? == 0 ]] ; then
+	# Currently broken in mas 1.4.1
+	# https://github.com/mas-cli/mas/issues/107#issuecomment-367383144
+	### TODO Fixed, but I've decided adding appleid as file is overkill
+	### I probably just delete this `signin` line
+	### mas signin $(cat .appleid)
+	echo "Please sign in to Mac App Store and then run again."
+	exit 1
+fi
+
+### TODO discovered that MAS doesn't will reinstall an Apple already directly installed
+###      using App Store. I probably just want to reinstall that first time
+###      A more compelling reason is updating using mas
+
+thingsProductID=$(mas search things | egrep '\d+\s+Things 3\s+\(' | awk '{print $1}')
+mas install $thingsProductID
+
+iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie\s+\(' | awk '{print $1}')
+mas install $iMovieProductID
+
+slackProductID=$(mas search slack | egrep '\d+\s+Slack\s+\(' | awk '{print $1}')
+mas install $slackProductID
+
+# List updates and upgrade
+mas outdated
+mas upgrade
+
+
+
+### TODO favor Apple Store versions 
+###      If there is a mas version then I should install
+###      from App Store as additional security review
+
 # Install Apps
 brew cask install --appdir=~/Applications dropbox \
                   1password cryptomator \
@@ -131,24 +167,6 @@ brew cask install --appdir=~/Applications sonos
 		## <None currently> ##
 
 
-# Install Apps that are not available on brew cask
-# ie apps that are only available on Mac App Store
-
-mas account | grep -q '^Not'
-if [[ $? == 0 ]] ; then
-	# Currently broken in mas 1.4.1
-	# https://github.com/mas-cli/mas/issues/107#issuecomment-367383144
-	### mas signin $(cat .appleid)
-	echo "Please sign in to Mac App Store and then run again."
-	exit 1
-fi
-
-
-thingsProductID=$(mas search things | egrep '\d+\s+Things 3\s+\(' | awk '{print $1}')
-mas install $thingsProductID
-
-iMovieProductID=$(mas search imovie | egrep '\d+\s+iMovie\s+\(' | awk '{print $1}')
-mas install $iMovieProductID
 
 
 ### TODO if preferences files don't exist (first run) then I should open
