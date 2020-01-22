@@ -61,13 +61,6 @@ fi
 ### TODO need to set push to ssh first time
 
 
-homeshick list | grep -q dotzsh
-if [[ $? != 0 ]] ; then
-	homeshick clone --batch https://github.com/lloydde/dotzsh
-fi
-### TODO need to set push to ssh first time
-
-
 # TODO linking every time is too slow even without --force
 #      Too slow for improving the script.
 ## Useful in scenario were re-running to get updates.
