@@ -255,7 +255,7 @@ dockutil --add /Applications/OmniOutliner.app --position 7
 
 # Keyboards
 
-osascript apple-scripts/keyboard-cfg.applescript
+# osascript apple-scripts/keyboard-cfg.applescript
 
 
 
