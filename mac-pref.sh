@@ -153,7 +153,8 @@ brew cask install --appdir=~/Applications dropbox \
                   cryptomator \
                   shiftit \
                   firefox brave-browser google-chrome \
-                  atext \
+                  flycut \ # Based on Jumpcut
+		  atext \
                   flux \
                   omnioutliner evernote skitch \
                   nvalt \
