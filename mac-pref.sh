@@ -165,7 +165,7 @@ brew cask install --appdir=~/Applications dropbox \
 brew cask install google-drive-file-stream
 
 # Sonos is not in main caskroom, but instead in a separate "drivers" :(
-brew tap caskroom/drivers
+brew tap homebrew/cask-drivers
 brew cask install --appdir=~/Applications sonos
 
 	# Trying
