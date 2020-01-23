@@ -118,6 +118,13 @@ if [[ $? == 0 ]] ; then
 	exit 1
 fi
 
+# List updates and upgrade
+# Do this first as I don't want to not list the individual updates
+# installed in this script
+mas outdated
+mas upgrade
+
+
 # 1Password 7
 passwordProductID=$(mas search 1password | egrep '\d+\s+1Password 7 - Password Manager\s+\('| awk '{print $1}')
 mas install $passwordProductID
@@ -134,10 +141,6 @@ mas install $iMovieProductID
 slackProductID=$(mas search slack | egrep '\d+\s+Slack\s+\(' | awk '{print $1}')
 mas install $slackProductID
 
-
-# List updates and upgrade
-mas outdated
-mas upgrade
 
 
 ### TODO favor Apple Store versions 
