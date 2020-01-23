@@ -150,7 +150,7 @@ mas install $slackProductID
 
 # Install Apps
 brew cask install --appdir=~/Applications dropbox \
-                  1password cryptomator \
+                  cryptomator \
                   shiftit \
                   firefox brave-browser google-chrome \
                   atext \
