@@ -161,6 +161,9 @@ brew cask install --appdir=~/Applications dropbox \
                   vlc \
                   openoffice
 
+# Requires sudo
+brew cask install google-drive-file-stream
+
 # Sonos is not in main caskroom, but instead in a separate "drivers" :(
 brew tap caskroom/drivers
 brew cask install --appdir=~/Applications sonos
@@ -192,9 +195,14 @@ brew cask install --appdir=~/Applications sonos
 
 ## Files & Links
 
-### iCloud Filesystem
+# iCloud Filesystem
 if [ ! -L ~/notes ]; then
 	ln -s ~/Dropbox/notes/ ~/notes
+fi
+
+# Google Drive File Stream
+if [ ! -L ~/gdrive ]; then
+	ln -s /Volumes/GoogleDrive/My\ Drive ~/gdrive
 fi
 
 ## end Files & Links
