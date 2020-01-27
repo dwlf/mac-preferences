@@ -253,7 +253,8 @@ dockutil --add /Applications/Mail.app --position 3 --no-restart
 # Calendar
 dockutil --add /Applications/Messages.app --position 5 --no-restart
 dockutil --add /Applications/Slack.app --position 6 --no-restart
-dockutil --add /Applications/OmniOutliner.app --position 7
+dockutil --add /Applications/OmniOutliner.app --position 7 --no-restart
+killall Dock # restart dock now that finished
 
 # Keyboards
 
