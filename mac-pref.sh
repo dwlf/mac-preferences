@@ -173,6 +173,8 @@ brew cask install --appdir=~/Applications sonos
 
 		## <None currently> ##
 
+brew cask install --appdir=~/Applications contexts
+
 	# Computer / Hardware specific
 
 		## <None currently> ##
