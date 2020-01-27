@@ -152,8 +152,8 @@ mas install $slackProductID
 brew cask install --appdir=~/Applications dropbox \
                   cryptomator \
                   shiftit \
-                  firefox brave-browser google-chrome \
                   flycut \ # Based on Jumpcut
+                  firefox brave-browser google-chrome \
 		  atext \
                   flux \
                   omnioutliner evernote skitch \
