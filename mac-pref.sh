@@ -122,7 +122,8 @@ fi
 # Do this first as I don't want to not list the individual updates
 # installed in this script
 mas outdated
-mas upgrade
+### TODO Check if NOT on personal hot spot / tethered
+### mas upgrade
 
 
 # 1Password 7
