@@ -181,6 +181,8 @@ brew cask install --appdir=~/Applications contexts
 		## <None currently> ##
 
 
+### TODO Uninstall Apple apps I don't use, example GarageBand
+
 
 
 ### TODO if first run then I there are some applications I want to "open"
