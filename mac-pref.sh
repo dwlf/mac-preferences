@@ -183,11 +183,16 @@ brew cask install --appdir=~/Applications contexts
 
 
 
-### TODO if preferences files don't exist (first run) then I should open
-###      recently installed application. For example, get Dropbox sync'd.
+### TODO if first run then I there are some applications I want to "open"
+         right away, because I want them running on start up 
+###      ex. Dropbox login and start sync
+###      I use dropbox to sync aText
+
+### TODO how to deal with license files? Currently, I store the license files
+###      in 1Password, but storing in a private git repo is likely sufficient.
 
 
-### TODO make this computer specific
+### TODO make computer specific sections
 # Current cask installs 3.2L31, but that doesn't work on macOS 10.12.2
 # Clicking update in the apps help menu gets the correct version, 3.2 L91
 #
