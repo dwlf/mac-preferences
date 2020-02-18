@@ -172,9 +172,9 @@ brew cask install --appdir=~/Applications sonos
 
 	# Trying
 
-		## <None currently> ##
+brew cask install --appdir=~/Applications contexts \
+		  itsycal
 
-brew cask install --appdir=~/Applications contexts
 
 	# Computer / Hardware specific
 
