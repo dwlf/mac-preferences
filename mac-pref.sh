@@ -154,7 +154,7 @@ brew cask install --appdir=~/Applications dropbox \
                   cryptomator \
                   shiftit \
                   flycut \ # Based on Jumpcut
-                  firefox brave-browser google-chrome \
+                  firefox brave-browser google-chrome browserosaurus \
 		  atext \
                   flux \
                   omnioutliner evernote skitch \
