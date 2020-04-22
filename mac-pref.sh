@@ -161,6 +161,7 @@ brew cask install --appdir=~/Applications dropbox \
                   nvalt \
                   slack skype \
                   vlc \
+		  thinkorswim \
                   openoffice
 
 # Requires sudo
