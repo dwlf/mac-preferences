@@ -159,7 +159,7 @@ brew cask install --appdir=~/Applications dropbox \
                   flux \
                   omnioutliner evernote skitch \
                   nvalt \
-                  slack skype \
+                  slack discord skype \
                   vlc \
 		  thinkorswim \
                   openoffice
